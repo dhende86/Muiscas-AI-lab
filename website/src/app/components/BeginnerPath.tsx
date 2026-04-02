@@ -83,7 +83,7 @@ const steps = [
 
 export function BeginnerPath() {
   return (
-    <section className="relative px-6 py-24">
+    <section id="beginner-path" className="relative px-6 py-24">
       {/* Subtle background accent */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[500px] bg-cyan-600/6 rounded-full blur-[140px] pointer-events-none" />
 

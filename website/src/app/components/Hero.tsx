@@ -1,4 +1,5 @@
 import { ArrowRight, Server, Zap } from "lucide-react";
+import owlImage from "../../assets/ksu-owl.png";
 
 export function Hero() {
   return (
@@ -17,6 +18,9 @@ export function Hero() {
           style={{ animationDelay: "2s" }}
         />
       </div>
+
+      {/* KSU Owl Logo */}
+      <img src={owlImage} alt="KSU Owl" className="relative z-10 w-32 h-32 object-contain mb-2" />
 
       {/* Badge */}
       <div className="relative z-10 mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm">
@@ -56,7 +60,10 @@ export function Hero() {
 
       {/* CTA Buttons */}
       <div className="relative z-10 flex flex-wrap items-center justify-center gap-4">
-        <button className="group flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300">
+        <button
+          onClick={() => document.getElementById("topics")?.scrollIntoView({ behavior: "smooth" })}
+          className="group flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300"
+        >
           Explore Tutorials
           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
         </button>

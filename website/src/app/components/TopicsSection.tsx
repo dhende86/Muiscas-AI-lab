@@ -1,4 +1,5 @@
 import { Shield, Monitor, FlaskConical, BookOpen, Activity, Box, Container, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
 const topics = [
   {
@@ -11,6 +12,7 @@ const topics = [
     iconColor: "text-emerald-400",
     iconBg: "bg-emerald-500/15",
     tag: "Networking",
+    path: "/tutorials/vpn",
   },
   {
     icon: Monitor,
@@ -22,28 +24,31 @@ const topics = [
     iconColor: "text-blue-400",
     iconBg: "bg-blue-500/15",
     tag: "GPU Compute",
+    path: "/tutorials/a100-dgx",
   },
   {
     icon: FlaskConical,
     title: "Virtual Environments",
-    description: "Set up isolated Python environments with conda or venv to keep your project dependencies organized.",
+    description: "Set up isolated Python environments with venv to keep your project dependencies organized.",
     color: "from-violet-500/20 to-purple-500/10",
     border: "border-violet-500/30",
     glow: "shadow-violet-500/10",
     iconColor: "text-violet-400",
     iconBg: "bg-violet-500/15",
     tag: "Python",
+    path: "/tutorials/venv",
   },
   {
     icon: BookOpen,
     title: "Launch Jupyter",
-    description: "Start and connect to Jupyter Notebook or JupyterLab sessions running on the remote server.",
+    description: "Start and connect to Jupyter Lab sessions running on the remote server via SSH port forwarding.",
     color: "from-orange-500/20 to-amber-500/10",
     border: "border-orange-500/30",
     glow: "shadow-orange-500/10",
     iconColor: "text-orange-400",
     iconBg: "bg-orange-500/15",
     tag: "Notebooks",
+    path: "/tutorials/jupyter",
   },
   {
     icon: Activity,
@@ -55,6 +60,7 @@ const topics = [
     iconColor: "text-green-400",
     iconBg: "bg-green-500/15",
     tag: "GPU Monitoring",
+    path: "/tutorials/nvidia-smi",
   },
   {
     icon: Box,
@@ -66,6 +72,7 @@ const topics = [
     iconColor: "text-sky-400",
     iconBg: "bg-sky-500/15",
     tag: "Infrastructure",
+    path: "/tutorials/containers",
   },
   {
     icon: Container,
@@ -77,12 +84,13 @@ const topics = [
     iconColor: "text-cyan-400",
     iconBg: "bg-cyan-500/15",
     tag: "DevOps",
+    path: "/tutorials/docker",
   },
 ];
 
 export function TopicsSection() {
   return (
-    <section className="relative px-6 py-24 max-w-7xl mx-auto">
+    <section id="topics" className="relative px-6 py-24 max-w-7xl mx-auto">
       {/* Section Header */}
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 mb-5">
@@ -107,8 +115,9 @@ export function TopicsSection() {
         {topics.map((topic) => {
           const Icon = topic.icon;
           return (
-            <div
+            <Link
               key={topic.title}
+              to={topic.path}
               className={`group relative rounded-2xl border ${topic.border} bg-gradient-to-br ${topic.color} bg-[#0a1628]/60 backdrop-blur-sm p-6 cursor-pointer hover:-translate-y-1.5 hover:shadow-xl ${topic.glow} transition-all duration-300 overflow-hidden`}
             >
               {/* Background glow on hover */}
@@ -138,7 +147,7 @@ export function TopicsSection() {
                 {topic.title}
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">{topic.description}</p>
-            </div>
+            </Link>
           );
         })}
 
