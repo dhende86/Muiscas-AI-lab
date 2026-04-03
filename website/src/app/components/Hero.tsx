@@ -1,7 +1,9 @@
 import { ArrowRight, Server, Zap } from "lucide-react";
+import { useNavigate } from "react-router";
 import owlImage from "../../assets/ksu-owl.png";
 
 export function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16 overflow-hidden">
       {/* Animated background blobs */}
@@ -67,7 +69,10 @@ export function Hero() {
           Explore Tutorials
           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
         </button>
-        <button className="flex items-center gap-2 px-7 py-3.5 rounded-full border border-slate-600 bg-white/5 backdrop-blur-sm text-slate-200 font-medium hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-300">
+        <button
+          onClick={() => navigate("/resources")}
+          className="flex items-center gap-2 px-7 py-3.5 rounded-full border border-slate-600 bg-white/5 backdrop-blur-sm text-slate-200 font-medium hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-300"
+        >
           <Server size={15} className="text-cyan-400" />
           View Resources
         </button>

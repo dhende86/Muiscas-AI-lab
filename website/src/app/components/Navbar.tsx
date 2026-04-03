@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import owlImage from "../../assets/ksu-owl.png";
 
 const tutorialLinks = [
@@ -14,6 +14,7 @@ const tutorialLinks = [
 ];
 
 export function Navbar() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -79,7 +80,7 @@ export function Navbar() {
         {/* CTA */}
         <div className="hidden md:block">
           <button
-            onClick={() => document.getElementById("beginner-path")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => navigate("/#beginner-path")}
             className="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-200"
           >
             Get Started
@@ -137,7 +138,7 @@ export function Navbar() {
           </Link>
 
           <button
-            onClick={() => { setMenuOpen(false); document.getElementById("beginner-path")?.scrollIntoView({ behavior: "smooth" }); }}
+            onClick={() => { setMenuOpen(false); navigate("/#beginner-path"); }}
             className="mt-2 px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium w-fit"
           >
             Get Started

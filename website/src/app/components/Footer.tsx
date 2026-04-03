@@ -1,4 +1,5 @@
 import { Cpu, Github, Mail, ExternalLink } from "lucide-react";
+import { Link } from "react-router";
 
 export function Footer() {
   return (
@@ -27,14 +28,20 @@ export function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2.5">
-              {["Home", "Tutorials", "Beginner Path", "Resources", "Contact"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
+              {[
+                { label: "Home", to: "/" },
+                { label: "Tutorials", to: "/#topics" },
+                { label: "Beginner Path", to: "/#beginner-path" },
+                { label: "Resources", to: "/resources" },
+                { label: "Contact", to: "/contact" },
+              ].map(({ label, to }) => (
+                <li key={label}>
+                  <Link
+                    to={to}
                     className="text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200 flex items-center gap-1.5"
                   >
-                    {item}
-                  </a>
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -47,21 +54,25 @@ export function Footer() {
             </h4>
             <div className="space-y-3">
               <a
-                href="#"
+                href="mailto:datacenter-support@kennesaw.edu"
                 className="flex items-center gap-3 text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200"
               >
                 <Mail size={14} className="text-slate-600" />
-                datacenter-support@university.edu
+                datacenter-support@kennesaw.edu
               </a>
               <a
-                href="#"
+                href="https://github.com/yuezk/GlobalProtect-openconnect"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200"
               >
                 <Github size={14} className="text-slate-600" />
                 GitHub Repository
               </a>
               <a
-                href="#"
+                href="https://uits.kennesaw.edu"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200"
               >
                 <ExternalLink size={14} className="text-slate-600" />

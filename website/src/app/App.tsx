@@ -1,6 +1,21 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, useLocation } from "react-router";
+import { useEffect } from "react";
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+  return null;
+}
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
+import ResourcesPage from "./pages/ResourcesPage";
 import VpnPage from "./pages/tutorials/VpnPage";
 import A100Page from "./pages/tutorials/A100Page";
 import VenvPage from "./pages/tutorials/VenvPage";
@@ -83,9 +98,11 @@ export default function App() {
 
       {/* ── Page Content ── */}
       <div className="relative z-10">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/tutorials/vpn" element={<VpnPage />} />
           <Route path="/tutorials/a100-dgx" element={<A100Page />} />
           <Route path="/tutorials/venv" element={<VenvPage />} />

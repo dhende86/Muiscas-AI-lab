@@ -1,8 +1,10 @@
 import { Shield, Monitor, FlaskConical, BookOpen, Activity, Box, ChevronRight, CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router";
 
 const steps = [
   {
     number: 1,
+    to: "/tutorials/vpn",
     icon: Shield,
     title: "VPN Setup",
     description: "Connect securely to the university network before anything else.",
@@ -16,6 +18,7 @@ const steps = [
   },
   {
     number: 2,
+    to: "/tutorials/a100-dgx",
     icon: Monitor,
     title: "Connect to A100 / DGX",
     description: "SSH into the GPU compute server once your VPN is active.",
@@ -29,6 +32,7 @@ const steps = [
   },
   {
     number: 3,
+    to: "/tutorials/venv",
     icon: FlaskConical,
     title: "Set Up Virtual Environment",
     description: "Create an isolated Python environment for your project.",
@@ -42,6 +46,7 @@ const steps = [
   },
   {
     number: 4,
+    to: "/tutorials/jupyter",
     icon: BookOpen,
     title: "Launch Jupyter",
     description: "Start a Jupyter server and connect from your local browser.",
@@ -55,6 +60,7 @@ const steps = [
   },
   {
     number: 5,
+    to: "/tutorials/nvidia-smi",
     icon: Activity,
     title: "Check Nvidia SMI",
     description: "Verify your GPU access and monitor resource usage.",
@@ -68,6 +74,7 @@ const steps = [
   },
   {
     number: 6,
+    to: "/tutorials/containers",
     icon: Box,
     title: "Use Containers / Docker",
     description: "Deploy your work in reproducible, portable containers.",
@@ -82,6 +89,7 @@ const steps = [
 ];
 
 export function BeginnerPath() {
+  const navigate = useNavigate();
   return (
     <section id="beginner-path" className="relative px-6 py-24">
       {/* Subtle background accent */}
@@ -127,7 +135,8 @@ export function BeginnerPath() {
 
                   {/* Card */}
                   <div
-                    className={`relative flex flex-col items-center text-center rounded-2xl border ${step.borderColor} ${step.bgColor} p-5 hover:-translate-y-1.5 hover:shadow-lg ${step.glowColor} transition-all duration-300 h-full z-10 bg-[#0a1628]/70 backdrop-blur-sm`}
+                    onClick={() => navigate(step.to)}
+                    className={`relative flex flex-col items-center text-center rounded-2xl border ${step.borderColor} ${step.bgColor} p-5 hover:-translate-y-1.5 hover:shadow-lg ${step.glowColor} transition-all duration-300 h-full z-10 bg-[#0a1628]/70 backdrop-blur-sm cursor-pointer`}
                   >
                     {/* Step number badge */}
                     <div
@@ -167,7 +176,10 @@ export function BeginnerPath() {
 
         {/* CTA below */}
         <div className="text-center mt-12">
-          <button className="group inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-cyan-300 font-medium hover:from-cyan-500/30 hover:to-blue-600/30 hover:border-cyan-400/50 transition-all duration-300">
+          <button
+            onClick={() => navigate("/tutorials/vpn")}
+            className="group inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-cyan-300 font-medium hover:from-cyan-500/30 hover:to-blue-600/30 hover:border-cyan-400/50 transition-all duration-300"
+          >
             Start the Beginner Path
             <ChevronRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
