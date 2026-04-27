@@ -17,7 +17,7 @@ const topics = [
   {
     icon: Monitor,
     title: "Connect to A100 / DGX",
-    description: "Step-by-step guidance for SSH access and remote login to the high-performance GPU compute servers.",
+    description: "Step by step guidance for SSH access and remote login to the high performance GPU compute servers.",
     color: "from-blue-500/20 to-cyan-500/10",
     border: "border-blue-500/30",
     glow: "shadow-blue-500/10",
@@ -105,7 +105,7 @@ export function TopicsSection() {
           Explore What You Can Learn
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto" style={{ lineHeight: 1.7 }}>
-          Each topic comes with step-by-step walkthroughs designed specifically for
+          Each topic comes with step by step walkthroughs designed specifically for
           students and researchers new to high-performance computing.
         </p>
       </div>

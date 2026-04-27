@@ -12,9 +12,9 @@ export default function VpnPage() {
         Full VPN documentation is available at the KSU UITS Security page. You will need your KSU NetID credentials to complete setup.
       </InfoBox>
 
-      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Step 1 — Installation</h2>
+      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Step 1: Installation</h2>
       <p className="text-slate-400 mb-4">
-        The KSU VPN is a client-based system. Download and install the <strong className="text-white">GlobalProtect</strong> VPN software on the device you will use to remotely access campus services.
+        The KSU VPN is a client based system. Download and install the <strong className="text-white">GlobalProtect</strong> VPN software on the device you will use to remotely access campus services.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -35,17 +35,17 @@ export default function VpnPage() {
         ))}
       </div>
 
-      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Step 2 — Connect to the Network</h2>
+      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Step 2: Connect to the Network</h2>
       <p className="text-slate-400 mb-4">
         Once GlobalProtect is installed, use these guides to log in and access campus services from off campus, just as you would while on campus.
       </p>
 
       <div className="flex flex-col gap-3 mb-8">
         <div className="p-4 rounded-xl border border-[#1e3a5f]/60 bg-[#0a1628]/60 text-slate-300 text-sm">
-          Connecting to KSU Network from off campus — <span className="text-slate-500">PC: Guide | Video</span>
+          Connecting to KSU Network from off campus, <span className="text-slate-500">PC: Guide | Video</span>
         </div>
         <div className="p-4 rounded-xl border border-[#1e3a5f]/60 bg-[#0a1628]/60 text-slate-300 text-sm">
-          Connecting to KSU Network from off campus — <span className="text-slate-500">Mac: Guide | Video</span>
+          Connecting to KSU Network from off campus, <span className="text-slate-500">Mac: Guide | Video</span>
         </div>
       </div>
 

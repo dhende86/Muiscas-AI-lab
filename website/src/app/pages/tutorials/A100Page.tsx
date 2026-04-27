@@ -6,7 +6,7 @@ export default function A100Page() {
       tag="GPU Compute"
       tagColor="border-blue-500/30 bg-blue-500/10 text-blue-400"
       title="Connecting to the A100 or DGX"
-      subtitle="SSH into the university's high-performance GPU servers. You should already have an account registered — let's connect."
+      subtitle="SSH into the university's high performance GPU servers. You should already have an account registered. Let's connect."
     >
       <InfoBox>
         Make sure you are connected to the <strong className="text-white">KSU VPN</strong> before attempting to connect to either server. See the VPN tutorial first if needed.
@@ -40,7 +40,7 @@ export default function A100Page() {
       </Step>
 
       <InfoBox>
-        If you connect successfully, you will see a command prompt like <strong className="text-white font-mono">jsmith@dgxa100:~$</strong> — you are now inside the server.
+        If you connect successfully, you will see a command prompt like <strong className="text-white font-mono">jsmith@dgxa100:~$</strong>. You are now inside the server.
       </InfoBox>
     </TutorialLayout>
   );

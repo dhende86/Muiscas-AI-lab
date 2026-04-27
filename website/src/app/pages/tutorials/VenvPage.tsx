@@ -12,7 +12,7 @@ export default function VenvPage() {
         This tutorial assumes you are already connected to the A100 or DGX server via SSH. See the <strong className="text-white">Connect to A100/DGX</strong> tutorial first.
       </InfoBox>
 
-      <h2 className="text-white text-2xl font-bold mt-10 mb-2">Part 1 — Create a Project Directory</h2>
+      <h2 className="text-white text-2xl font-bold mt-10 mb-2">Part 1: Create a Project Directory</h2>
       <p className="text-slate-400 mb-6">
         Once you are in the server, create a directory where your project files will be stored. Make sure to change into the directory you just made.
       </p>
@@ -26,7 +26,7 @@ export default function VenvPage() {
         <Code>python3 -m venv myenv</Code>
       </Step>
 
-      <h2 className="text-white text-2xl font-bold mt-10 mb-2">Part 2 — Activate and Deactivate</h2>
+      <h2 className="text-white text-2xl font-bold mt-10 mb-2">Part 2: Activate and Deactivate</h2>
       <p className="text-slate-400 mb-6">
         Now activate the virtual environment and install packages using pip. To deactivate, simply type <code className="text-violet-300">deactivate</code> in the terminal.
       </p>
@@ -39,7 +39,7 @@ export default function VenvPage() {
       <Step number="04" title="Install packages with pip">
         With the environment active, install any packages you need:
         <Code>pip install numpy pandas</Code>
-        Any packages installed here are isolated to this project — they won't affect other projects on the server.
+        Any packages installed here are isolated to this project and won't affect other projects on the server.
       </Step>
 
       <Step number="05" title="Deactivate when done">

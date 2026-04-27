@@ -4,7 +4,7 @@ const pillars = [
   {
     icon: Lightbulb,
     title: "Clarity First",
-    description: "Complex tools explained in plain language — no assumed background knowledge.",
+    description: "Complex tools explained in plain language with no assumed background knowledge.",
     color: "text-yellow-400",
     bg: "bg-yellow-500/10",
     border: "border-yellow-500/20",
@@ -20,7 +20,7 @@ const pillars = [
   {
     icon: BookOpenCheck,
     title: "Structured Learning",
-    description: "Follow guided paths or jump directly to the topic you need — your pace, your choice.",
+    description: "Follow guided paths or jump directly to the topic you need. Your pace, your choice.",
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
     border: "border-emerald-500/20",
@@ -70,13 +70,13 @@ export function WhySection() {
             </h2>
             <div className="space-y-4 text-slate-300" style={{ lineHeight: 1.8, fontSize: "1.05rem" }}>
               <p>
-                The university data center is home to powerful computing infrastructure — from
-                GPU clusters and A100 servers to containerized environments and high-speed
+                The university data center is home to powerful computing infrastructure including
+                GPU clusters and A100 servers, containerized environments, and high speed
                 interconnects. These tools unlock the full potential of modern research,
                 machine learning, and data science.
               </p>
               <p>
-                But for new users — students, researchers, and first-time HPC users — this
+                But for new users (students, researchers, and first-time HPC users), this
                 ecosystem can feel overwhelming. Documentation is often scattered, commands
                 are cryptic, and there's rarely a clear "where do I start?" answer.
               </p>
@@ -84,8 +84,8 @@ export function WhySection() {
                 <span className="text-cyan-300 font-medium">
                   This platform was created to change that.
                 </span>{" "}
-                It gives every new user a single, organized, beginner-friendly home base for
-                learning how to confidently use the data center's tools and resources — from
+                It gives every new user a single, organized, beginner friendly home base for
+                learning how to confidently use the data center's tools and resources, from
                 first login to running your first GPU workload.
               </p>
             </div>

@@ -56,7 +56,7 @@ export function Hero() {
         style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", lineHeight: 1.7 }}
       >
         Your one-stop platform to access, learn, and confidently navigate the university data
-        center. Step-by-step tutorials, walkthroughs, and beginner-friendly guides — all in
+        center. Step by step tutorials, walkthroughs, and beginner friendly guides, all in
         one place.
       </p>
 

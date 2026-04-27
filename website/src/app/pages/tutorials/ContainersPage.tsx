@@ -55,7 +55,7 @@ export default function ContainersPage() {
       <div className="p-6 rounded-2xl border border-cyan-500/30 bg-[#0a1628]/60 mb-8">
         <h3 className="text-white font-bold text-lg mb-2">Docker</h3>
         <p className="text-slate-400 leading-relaxed">
-          Docker is a platform that lets you package an application and all of its dependencies into a lightweight, portable <strong className="text-white">"container"</strong>. Containers can run identically on your laptop, a colleague's machine, or the university's GPU servers — making research fully reproducible.
+          Docker is a platform that lets you package an application and all of its dependencies into a lightweight, portable <strong className="text-white">"container"</strong>. Containers can run identically on your laptop, a colleague's machine, or the university's GPU servers, making research fully reproducible.
         </p>
       </div>
 

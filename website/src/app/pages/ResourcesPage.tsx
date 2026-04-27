@@ -56,7 +56,7 @@ export default function ResourcesPage() {
               Downloads &amp; Links
             </h1>
             <p className="text-slate-400 text-lg leading-relaxed">
-              Everything you need to get connected and set up — VPN clients, Linux tools, and more.
+              Everything you need to get connected and set up: VPN clients, Linux tools, and more.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function ResourcesPage() {
             </p>
             <ResourceCard
               href="https://vpn.kennesaw.edu/global-protect/getsoftwarepage.esp"
-              title="GlobalProtect VPN — KSU Portal"
+              title="GlobalProtect VPN | KSU Portal"
               description="Official KSU download page for the GlobalProtect VPN client. Supports Windows, macOS, iOS, and Android."
               icon={<Download size={18} />}
               label="Go to download page"

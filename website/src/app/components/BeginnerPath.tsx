@@ -112,7 +112,7 @@ export function BeginnerPath() {
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto" style={{ lineHeight: 1.7 }}>
             New to the data center? Follow this guided sequence to go from zero to
-            running your first GPU-accelerated workload.
+            running your first GPU accelerated workload.
           </p>
         </div>
 

@@ -12,7 +12,7 @@ export default function DockerPage() {
         Make sure you are already connected to the server via SSH before starting. See the <strong className="text-white">Connect to A100/DGX</strong> tutorial if needed.
       </InfoBox>
 
-      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Part 1 — Run a Docker Container</h2>
+      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Part 1: Run a Docker Container</h2>
 
       <Step number="01" title="Launch a container in the background">
         Run the following command on the server. This starts an nginx container mapped to port 8080:
@@ -32,7 +32,7 @@ export default function DockerPage() {
         </div>
       </Step>
 
-      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Part 2 — Forward the Port to Your Machine</h2>
+      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Part 2: Forward the Port to Your Machine</h2>
 
       <Step number="02" title="Open a new terminal and forward port 8080">
         On your <strong className="text-white">local machine</strong>, open a second terminal and run:
@@ -41,7 +41,7 @@ export default function DockerPage() {
         <Code>ssh -L 8080:localhost:8080 jsmith@10.96.50.180</Code>
       </Step>
 
-      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Part 3 — View in Your Browser</h2>
+      <h2 className="text-white text-2xl font-bold mt-10 mb-6">Part 3: View in Your Browser</h2>
 
       <Step number="03" title="Open localhost:8080 in your browser">
         With the port forwarding active, open your web browser and go to:

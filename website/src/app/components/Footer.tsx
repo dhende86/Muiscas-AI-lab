@@ -1,4 +1,4 @@
-import { Cpu, Github, Mail, ExternalLink } from "lucide-react";
+import { Cpu, Mail } from "lucide-react";
 import { Link } from "react-router";
 
 export function Footer() {
@@ -54,29 +54,11 @@ export function Footer() {
             </h4>
             <div className="space-y-3">
               <a
-                href="mailto:datacenter-support@kennesaw.edu"
+                href="mailto:pordonez@kennesaw.edu"
                 className="flex items-center gap-3 text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200"
               >
                 <Mail size={14} className="text-slate-600" />
-                datacenter-support@kennesaw.edu
-              </a>
-              <a
-                href="https://github.com/yuezk/GlobalProtect-openconnect"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200"
-              >
-                <Github size={14} className="text-slate-600" />
-                GitHub Repository
-              </a>
-              <a
-                href="https://uits.kennesaw.edu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200"
-              >
-                <ExternalLink size={14} className="text-slate-600" />
-                University IT Portal
+                pordonez@kennesaw.edu
               </a>
             </div>
           </div>
@@ -85,7 +67,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-[#1e3a5f]/30 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-slate-600 text-xs">
-            © 2025 Data Center Learning Hub — University Research Infrastructure
+            © 2025 Data Center Learning Hub | University Research Infrastructure
           </p>
           <p className="text-slate-700 text-xs">
             Built to make HPC accessible for everyone
