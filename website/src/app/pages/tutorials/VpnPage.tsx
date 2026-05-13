@@ -17,23 +17,15 @@ export default function VpnPage() {
         The KSU VPN is a client based system. Download and install the <strong className="text-white">GlobalProtect</strong> VPN software on the device you will use to remotely access campus services.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-        {[
-          "Windows 10",
-          "Windows 11",
-          "Mac OS",
-          "Android",
-          "iOS",
-        ].map((os) => (
-          <div
-            key={os}
-            className="flex items-center gap-3 p-4 rounded-xl border border-[#1e3a5f]/60 bg-[#0a1628]/60"
-          >
-            <div className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" />
-            <span className="text-slate-300 text-sm font-medium">{os}</span>
-          </div>
-        ))}
-      </div>
+      <a
+        href="https://vpn.kennesaw.edu/global-protect/getsoftwarepage.esp"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-between p-4 rounded-xl border border-[#1e3a5f]/60 bg-[#0a1628]/60 hover:border-cyan-500/40 transition-all duration-200 mb-8"
+      >
+        <span className="text-slate-300 text-sm">GlobalProtect VPN | KSU Portal</span>
+        <span className="text-cyan-400 text-sm font-medium">Go to download page →</span>
+      </a>
 
       <h2 className="text-white text-2xl font-bold mt-10 mb-6">Step 2: Connect to the Network</h2>
       <p className="text-slate-400 mb-4">
@@ -42,10 +34,44 @@ export default function VpnPage() {
 
       <div className="flex flex-col gap-3 mb-8">
         <div className="p-4 rounded-xl border border-[#1e3a5f]/60 bg-[#0a1628]/60 text-slate-300 text-sm">
-          Connecting to KSU Network from off campus, <span className="text-slate-500">PC: Guide | Video</span>
+          Connecting to KSU Network from off campus, PC:{" "}
+          <a
+            href="https://kennesaw.service-now.com/sp?id=kb_article_view&sysparm_article=KB0013387"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:underline"
+          >
+            Guide
+          </a>
+          {" | "}
+          <a
+            href="https://mediaspace.kennesaw.edu/media/GlobalProtect+VPN+Network+Access+on+PC/1_3yqnkd8r"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:underline"
+          >
+            Video
+          </a>
         </div>
         <div className="p-4 rounded-xl border border-[#1e3a5f]/60 bg-[#0a1628]/60 text-slate-300 text-sm">
-          Connecting to KSU Network from off campus, <span className="text-slate-500">Mac: Guide | Video</span>
+          Connecting to KSU Network from off campus, Mac:{" "}
+          <a
+            href="https://kennesaw.service-now.com/sp?id=kb_article_view&sysparm_article=KB0012904"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:underline"
+          >
+            Guide
+          </a>
+          {" | "}
+          <a
+            href="https://mediaspace.kennesaw.edu/media/2_KSU_VPN_Client_Installation_MacOS/1_3remo7ux"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:underline"
+          >
+            Video
+          </a>
         </div>
       </div>
 

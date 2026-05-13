@@ -1,4 +1,4 @@
-import { ExternalLink, Download, Github } from "lucide-react";
+import { ExternalLink, Download, Github, FileText, Play } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
@@ -78,6 +78,52 @@ export default function ResourcesPage() {
               tag="Official"
               tagColor="border-emerald-500/30 bg-emerald-500/10 text-emerald-400"
             />
+          </section>
+
+          {/* Connection Guides Section */}
+          <section className="mb-12">
+            <h2 className="text-white text-2xl font-bold mb-2">Connection Guides</h2>
+            <p className="text-slate-400 text-sm mb-6">
+              Step by step guides and videos for connecting to the KSU network from off campus on PC and Mac.
+            </p>
+            <div className="flex flex-col gap-4">
+              <ResourceCard
+                href="https://kennesaw.service-now.com/sp?id=kb_article_view&sysparm_article=KB0013387"
+                title="Connecting to KSU Network from off campus on PC"
+                description="Official KSU knowledge base article with step by step instructions for connecting to the network on a Windows PC."
+                icon={<FileText size={18} />}
+                label="View guide"
+                tag="PC"
+                tagColor="border-cyan-500/30 bg-cyan-500/10 text-cyan-400"
+              />
+              <ResourceCard
+                href="https://mediaspace.kennesaw.edu/media/GlobalProtect+VPN+Network+Access+on+PC/1_3yqnkd8r"
+                title="GlobalProtect VPN Network Access on PC"
+                description="Video walkthrough for installing and connecting to GlobalProtect VPN on a Windows PC."
+                icon={<Play size={18} />}
+                label="Watch video"
+                tag="PC"
+                tagColor="border-cyan-500/30 bg-cyan-500/10 text-cyan-400"
+              />
+              <ResourceCard
+                href="https://kennesaw.service-now.com/sp?id=kb_article_view&sysparm_article=KB0012904"
+                title="Connecting to KSU Network from off campus on Mac"
+                description="Official KSU knowledge base article with step by step instructions for connecting to the network on a Mac."
+                icon={<FileText size={18} />}
+                label="View guide"
+                tag="Mac"
+                tagColor="border-violet-500/30 bg-violet-500/10 text-violet-400"
+              />
+              <ResourceCard
+                href="https://mediaspace.kennesaw.edu/media/2_KSU_VPN_Client_Installation_MacOS/1_3remo7ux"
+                title="KSU VPN Client Installation on macOS"
+                description="Video walkthrough for installing and connecting to GlobalProtect VPN on a Mac."
+                icon={<Play size={18} />}
+                label="Watch video"
+                tag="Mac"
+                tagColor="border-violet-500/30 bg-violet-500/10 text-violet-400"
+              />
+            </div>
           </section>
 
           {/* Linux Section */}
